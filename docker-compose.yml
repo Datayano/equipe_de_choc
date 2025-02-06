@@ -24,11 +24,21 @@ services:
       - QDRANT_PORT=6333
     restart: unless-stopped
 
+
+
+
   front_angular:
     build: ./front_angular
     ports:
-      - "4200:80"
+      - "4200:4200"
+    volumes:
+      - ./front_angular/src:/app/src
+      - ./front_angular/package.json:/app/package.json
+      - ./front_angular/angular.json:/app/angular.json
+      - ./front_angular/tsconfig.json:/app/tsconfig.json
+      - ./front_angular/tsconfig.app.json:/app/tsconfig.app.json
     depends_on:
       - agent_logic
     restart: unless-stopped
+
 

@@ -1,0 +1,8 @@
+Pour la version de production, il faut changer le docker compose.yml avec :
+  front_angular:
+    build: ./front_angular
+    ports:
+      - "4200:80"
+    depends_on:
+      - agent_logic
+    restart: unless-stopped
