@@ -1,0 +1,7 @@
+langchain
+langgraph
+requests
+flask
+qdrant-client
+python-dotenv
+pydantic

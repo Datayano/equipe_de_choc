@@ -1,0 +1,10 @@
+<div style="text-align:center">
+    <h1>{{ title }}</h1>
+    <input [(ngModel)]="query" placeholder="Entrez votre requête" style="width:300px;" />
+    <button (click)="sendQuery()">Envoyer</button>
+    <div *ngIf="response">
+      <h3>Réponse :</h3>
+      <p>{{ response }}</p>
+    </div>
+  </div>
+  
